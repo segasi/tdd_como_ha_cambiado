@@ -201,7 +201,7 @@ bd_prod_petroleo %>%
        caption = "Elaborado por Sebastián Garrido de Sierra / @segasi\nFuente: Producción de petróleo crudo por entidad federativa, SIE-SENER-PEMEX, tinyurl.com/produccion-petroleo-mx\nNota: Las cifras corresponden a la producción medida a 20ºC de temperatura y 1 atmósfera.") +
   tema +
   theme(plot.title = element_markdown(size = 32.5),
-        plot.subtitle = element_markdown(size = 22),
+        plot.subtitle = element_markdown(size = 21.5),
         legend.position = "none")
 
 ggsave("03_vis/02_produccion_petroleo/produccion_petroleo_crudo_12_2006_07_2023_2.png", dpi = 300, width = 16, height = 10)
