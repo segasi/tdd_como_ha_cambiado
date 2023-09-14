@@ -69,7 +69,10 @@ bd_prod_petroleo %>%
 bd_prod_petroleo %>%
   as.data.frame() %>% 
   tail(n = 10)
-  
+
+# Todo
+bd_prod_petroleo %>%
+  as.data.frame()
 
 
 # Primera gráfica ----
@@ -116,7 +119,7 @@ bd_prod_petroleo %>%
                      labels = comma) +
   scale_color_identity() +
   labs(title = "En este sexenio se revirtió la tendencia a la baja de la <span style='color:#a50f15'>producción de petróleo</span>...",
-       subtitle = "Misma que significó una caída de <span style='color:#a50f15'>42.4%</span> durante las administraciones de <span style='color:#00308E'>Calderón</span> y <span style='color:#004e22'>Peña Nieto</span>", 
+       subtitle = "Misma que significó una disminución de <span style='color:#a50f15'>42.4%</span> durante las administraciones de <span style='color:#00308E'>Calderón</span> y <span style='color:#004e22'>Peña Nieto</span>", 
        x = "",
        y = NULL,
        caption = "Elaborado por Sebastián Garrido de Sierra / @segasi\nFuente: Producción de petróleo crudo por entidad federativa, SIE-SENER-PEMEX, tinyurl.com/produccion-petroleo-mx\nNota: Las cifras corresponden a la producción medida a 20ºC de temperatura y 1 atmósfera.") +
@@ -182,8 +185,10 @@ bd_prod_petroleo %>%
             fontface = "bold", family = "Noto Sans JP",
             color = "#a50f15", lineheight = 0.9,
             vjust = 1.2, hjust = 0.7, size = 4.5) +
+  # Etiqueta eje y
+  annotate(geom = "text", label = "Miles de barriles diarios", angle = 90, x = -1.5, y = 1450, hjust = 0, size = 5, fontface = "bold", family = "Noto Sans JP",  color = "grey30") +
   scale_x_continuous(breaks = c(seq(from = 0, to = 60, by = 10), 71),
-                     limits = c(-1, 72),
+                     limits = c(-3, 72),
                      expand = c(0, 0)) +
   scale_y_continuous(breaks = seq(from = 0, to = 3500, by = 250),
                      limits = c(1450, 3300),
@@ -192,11 +197,11 @@ bd_prod_petroleo %>%
   labs(title = "La <span style='color:#a50f15'>producción de petróleo</span> ha crecido <span style='color:#a50f15'>7.3%</span> durante la actual administración...",
        subtitle = "Pero en el mes 55 es <span style='color:#00308E'>26.8%</span> y <span style='color:#004e22'>6.6%</span> menor que en el mismo período de los sexenios de <span style='color:#00308E'>Calderón</span> y <span style='color:#004e22'>Peña Nieto</span>", 
        x = "Meses transcurridos",
-       y = "Miles de barriles diarios",
+       y = NULL,
        caption = "Elaborado por Sebastián Garrido de Sierra / @segasi\nFuente: Producción de petróleo crudo por entidad federativa, SIE-SENER-PEMEX, tinyurl.com/produccion-petroleo-mx\nNota: Las cifras corresponden a la producción medida a 20ºC de temperatura y 1 atmósfera.") +
   tema +
   theme(plot.title = element_markdown(size = 32.5),
-        plot.subtitle = element_markdown(size = 21.5),
+        plot.subtitle = element_markdown(size = 22),
         legend.position = "none")
 
 ggsave("03_vis/02_produccion_petroleo/produccion_petroleo_crudo_12_2006_07_2023_2.png", dpi = 300, width = 16, height = 10)
