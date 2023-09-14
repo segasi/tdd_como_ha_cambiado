@@ -1,5 +1,5 @@
 ### Paquetes ----
-pacman::p_load(cowplot, geomtextpath, gganimate, GGally, ggforce, ggmap, ggrepel, ggridges, gifski, geomtextpath, ggtext, httr, janitor, jsonlite, leaflet, leaflet.extras, pdftools, RColorBrewer, rcartocolor, readxl, scales, sf, shadowtext, tidyverse,  treemapify, wesanderson, zoo)
+pacman::p_load(cowplot, fs, geomtextpath, gganimate, GGally, ggforce, ggmap, ggrepel, ggridges, gifski, geomtextpath, ggtext, httr, janitor, jsonlite, leaflet, leaflet.extras, pdftools, RColorBrewer, rcartocolor, readxl, scales, sf, shadowtext, tidyverse,  treemapify, wesanderson, zoo)
 
 ### Setup general ----
 Sys.setlocale("LC_ALL", "es_ES.UTF-8") 
