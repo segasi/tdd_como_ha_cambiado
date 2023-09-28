@@ -2,7 +2,7 @@
 
 Este repo contiene las bases de datos, código, gráficas y documentos que he utilizado en el proceso de elaboración de cada texto de la serie __¿Cómo ha cambiado _ _ _ en México?__, publicados en el [Taller de datos](https://datos.nexos.com.mx/) de la revista Nexos.
 
-![My image](https://github.com/segasi/tdd_como_ha_cambiado/blob/main/03_vis/01_salario_minimo/evolucion_evolucion_salario_minimo_12_2006_08_2023_1.png)
+![My image](https://github.com/segasi/tdd_como_ha_cambiado/blob/main/03_vis/03_matrimonios/evolucion_porcentaje_matrimonios_por_rngo_edad_2007_2022.png)
 
 En esta serie exploro cómo han evolucionado diversos fenómenos económicos, políticos y sociales en México a partir del 1 de diciembre de 2006.
 
